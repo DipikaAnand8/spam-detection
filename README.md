@@ -28,7 +28,6 @@ Users receive a large number of messages daily, and many are spam. Manually filt
 - **Feature Extraction:** Converts text into numerical vectors using **CountVectorizer**.  
 - **Naive Bayes Algorithm:** **Multinomial Naive Bayes** classifies messages based on word frequency.  
 - **Model Evaluation:** Accuracy, precision, recall, and F1-score measure performance.  
-- **Real-time Deployment:** **Streamlit** interface allows users to input messages and get instant predictions.
 
 ---
 
@@ -39,8 +38,7 @@ Users receive a large number of messages daily, and many are spam. Manually filt
   - CountVectorizer  
   - Multinomial Naive Bayes  
   - train_test_split  
-- **NLTK:** Text preprocessing, removing stop words.  
-- **Streamlit:** Real-time interactive web interface.  
+- **NLTK:** Text preprocessing, removing stop words.    
 - **Dataset:** SMS Spam Collection Dataset (labeled SMS messages as spam or ham).
 
 ---
@@ -52,24 +50,50 @@ Users receive a large number of messages daily, and many are spam. Manually filt
 4. Split data: 80% training, 20% testing.  
 5. Train **Multinomial Naive Bayes** classifier.  
 6. Test the model on unseen messages and evaluate performance.  
-7. Deploy the model with **Streamlit** for real-time message validation.
 
 ---
 ## Setting Up
 
 ### Step 1: Clone the GitHub Repository
-- Copy the repository URL from GitHub.
+
+* Copy the repository URL from GitHub and clone it:
+
+```bash
+git clone <your-repo-link>
+cd <your-repo-folder>
+```
 
 ### Step 2: Set Up Python Environment
-- Ensure Python 3.8+ is installed.
+
+* Ensure Python 3.8+ is installed.
 
 ### Step 3: Install Required Libraries
 
-### Step 4: Add the Dataset
-- Ensure `spam.csv` is in the project folder.
+```bash
+pip install pandas scikit-learn
+```
 
-### Step 5: Run the Streamlit App
-- Enter a message in the text box and click **Validate** to see results.
+### Step 4: Add the Dataset
+
+* Ensure `spam.csv` is in the project folder.
+
+### Step 5: Run the Command-Line Program
+
+```bash
+python SpamDetection.py
+```
+
+### Step 6: Use the Program
+
+* Enter a message when prompted
+* The program will display:
+
+  * **Spam**
+  * **Not Spam**
+* Type `exit` to close the program
+
+
+
 
 ## Challenges Faced
 - Cleaning dataset and removing duplicates.  
@@ -80,8 +104,8 @@ Users receive a large number of messages daily, and many are spam. Manually filt
 ---
 
 ## Results
-- Accuracy: **98.45%** on test dataset.  
-- Successfully classified both test data and new messages via Streamlit.  
+- Accuracy: **98.64%** on test dataset.  
+- Successfully classified both test data
 - Confusion matrix confirmed correct classification of spam and non-spam messages.  
 - Real-time interface allows easy message validation.
 
